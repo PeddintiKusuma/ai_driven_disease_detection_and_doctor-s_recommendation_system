@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-800 antialiased font-sans bg-slate-50;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 text-white px-4 py-2.5 rounded-xl hover:bg-primary-700 active:bg-primary-800 transition-all font-semibold shadow-sm hover:shadow-healix disabled:opacity-50 disabled:cursor-not-allowed disabled:shadow-none;
+  }
+  .btn-secondary {
+    @apply bg-white text-primary-700 border border-primary-200 px-4 py-2.5 rounded-xl hover:bg-primary-50 hover:border-primary-300 transition-all font-semibold;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-healix border border-primary-100/60 p-6;
+  }
+  .input-field {
+    @apply w-full px-4 py-2.5 border border-slate-200 rounded-xl bg-white focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500 outline-none transition-all;
+  }
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .badge-low { @apply bg-primary-50 text-primary-700; }
+  .badge-moderate { @apply bg-amber-50 text-amber-800; }
+  .badge-high { @apply bg-orange-50 text-orange-800; }
+  .badge-critical { @apply bg-red-50 text-red-800; }
+  .healix-gradient {
+    @apply bg-gradient-to-br from-primary-50 via-white to-primary-100/40;
+  }
+  .healix-hero {
+    background:
+      radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37, 99, 235, 0.12), transparent),
+      linear-gradient(to bottom right, #eff6ff, #ffffff, #dbeafe);
+  }
+}

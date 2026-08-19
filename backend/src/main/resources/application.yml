@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: ai-disease-doctor-system
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/ai_healthcare?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:Kusuma054507}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:CHANGE_THIS_LOCAL_SECRET_KEY_AT_LEAST_256_BITS_LONG_FOR_JWT_SIGNING}
+    expiration-ms: 86400000
+  ml:
+    api-url: ${ML_API_URL:http://localhost:5000}
+  cors:
+    allowed-origins: http://localhost:5173,http://localhost:3000
+  admin:
+    registration-key: ${ADMIN_REGISTRATION_KEY:Healix@Admin2026}
+
+logging:
+  level:
+    com.aihealthcare: INFO
+    org.springframework.security: WARN

@@ -1,0 +1,44 @@
+# Environment
+.env
+.env.local
+*.env
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Java / Maven
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+*.war
+*.log
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Python
+ml-service/venv/
+ml-service/__pycache__/
+ml-service/**/__pycache__/
+ml-service/*.pyc
+ml-service/.pytest_cache/
+ml-service/models/*.pkl
+
+# Database dumps
+*.sql.bak
+
+# Secrets
+**/application-local.yml
+**/application-local.properties

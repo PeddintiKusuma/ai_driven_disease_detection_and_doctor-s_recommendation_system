@@ -1,0 +1,5 @@
+package com.aihealthcare.model.enums;
+
+public enum RiskLevel {
+    LOW, MODERATE, HIGH, CRITICAL
+}
